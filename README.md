@@ -17,7 +17,17 @@ Step 2. Add the dependency
 	        implementation 'com.github.CuteWiseCode:MyLoadingView:1.0.0'
 	}
   
+Step 3. Use in xml
+ 
+ 
+     <com.cutewisecode.AnimationView
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
   
+    
+
     
 # LoadingView
 android loading view

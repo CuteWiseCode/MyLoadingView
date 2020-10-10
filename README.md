@@ -1,3 +1,24 @@
+
+# 介绍
+ MyLoadingView 是一个自定义的loading 动画
+ 
+# 使用
+ Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+Step 2. Add the dependency
+
+	dependencies {
+	        implementation 'com.github.CuteWiseCode:MyLoadingView:1.0.0'
+	}
+  
+  
+    
 # LoadingView
 android loading view
 效果图如下：

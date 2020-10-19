@@ -1,6 +1,6 @@
 
 # 介绍
- MyLoadingView 是一个自定义的loading 动画
+ MyLoadingView 是一个自定义的loading 动画, 暂时未支持配置不同图片
  
 # 使用
  Add it in your root build.gradle at the end of repositories:

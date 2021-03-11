@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
+    android:layout_height="fill_parent"
     android:layout_gravity="center"
     >
 
@@ -14,39 +14,39 @@
     <ImageView
         android:layout_gravity="center"
         android:id="@+id/loading_view_01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="86.0dip"
+        android:layout_height="86.0dip"
         android:src="@mipmap/loading_01" />
 
     <ImageView
         android:layout_gravity="center"
         android:id="@+id/loading_view_02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="86.0dip"
+        android:layout_height="86.0dip"
         android:src="@mipmap/loading_02"
         android:visibility="invisible" />
 
     <ImageView
         android:layout_gravity="center"
         android:id="@+id/loading_view_03"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="86.0dip"
+        android:layout_height="86.0dip"
         android:src="@mipmap/loading_03"
         android:visibility="invisible" />
 
     <ImageView
         android:layout_gravity="center"
         android:id="@+id/loading_view_04"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="86.0dip"
+        android:layout_height="86.0dip"
         android:src="@mipmap/loading_04"
         android:visibility="invisible" />
 
     <ImageView
         android:layout_gravity="center"
         android:id="@+id/loading_view_05"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="86.0dip"
+        android:layout_height="86.0dip"
         android:src="@mipmap/loading_05"
         android:visibility="invisible" />
 

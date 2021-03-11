@@ -24,6 +24,12 @@ Step 3. Use in xml
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:translationspeed="400"
+        app:image1="@mipmap/im_cabbage"
+        app:image2="@mipmap/im_chinesechives"
+        app:image3="@mipmap/im_greenchineseonion"
+        app:image4="@mipmap/im_hyacinthbean"
+        app:image5="@mipmap/im_rutabaga"
         />
   
     

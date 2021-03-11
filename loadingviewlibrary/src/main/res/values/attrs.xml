@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AnimationView">
+        <attr name="translationspeed" format="integer" />
+        <attr name="image1" format="reference" />
+        <attr name="image2" format="reference" />
+        <attr name="image3" format="reference" />
+        <attr name="image4" format="reference" />
+        <attr name="image5" format="reference" />
+    </declare-styleable>
+
+</resources>

@@ -14,7 +14,7 @@
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.CuteWiseCode:MyLoadingView:1.0.0'
+	       implementation 'com.github.CuteWiseCode:MyLoadingView:Tag'
 	}
   
 Step 3. Use in xml

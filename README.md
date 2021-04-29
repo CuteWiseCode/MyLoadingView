@@ -11,7 +11,7 @@
 			maven { url 'https://jitpack.io' }
 		}
 	}
-Step 2. Add the dependency
+Step 2. Add the dependency   ![image](https://jitpack.io/v/CuteWiseCode/MyLoadingView.svg)
 
 	dependencies {
 	       implementation 'com.github.CuteWiseCode:MyLoadingView:Tag'

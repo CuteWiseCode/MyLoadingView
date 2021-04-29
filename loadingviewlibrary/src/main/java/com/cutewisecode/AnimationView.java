@@ -27,19 +27,20 @@ public class AnimationView extends FrameLayout {
     private ImageView view05;
     private int DURATION = 400;//duration
 
-    private  int Id_image1;
-    private  int Id_image2;
-    private  int Id_image3;
-    private  int Id_image4;
-    private  int Id_image5;
+    private int Id_image1;
+    private int Id_image2;
+    private int Id_image3;
+    private int Id_image4;
+    private int Id_image5;
 
     //struct
     public AnimationView(Context paramContext) {
         super(paramContext);
         Log.i(TAG, "AnimationView");
-        inflate(getContext(), R.layout.loading_view, this);//layout_loading_view
+
         initializeView();
     }
+
 
     public AnimationView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -48,14 +49,25 @@ public class AnimationView extends FrameLayout {
         final TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.AnimationView);
         int speed = array.getInt(R.styleable.AnimationView_translationspeed, 0);
         Id_image1 = array.getResourceId(R.styleable.AnimationView_image1, 0);
-        Id_image2= array.getResourceId(R.styleable.AnimationView_image2, 0);
+        Id_image2 = array.getResourceId(R.styleable.AnimationView_image2, 0);
         Id_image3 = array.getResourceId(R.styleable.AnimationView_image3, 0);
         Id_image4 = array.getResourceId(R.styleable.AnimationView_image4, 0);
         Id_image5 = array.getResourceId(R.styleable.AnimationView_image5, 0);
 
-        if(speed!=0)
-            DURATION =speed;
-        inflate(getContext(), R.layout.loading_view, this);//layout_loading_view
+        if (speed != 0) DURATION = speed;
+
+        initializeView();
+    }
+
+
+    private AnimationView(int FirstImgID, int SecondImgID, int ThirdImgID, int FourthImgID, int FithImgID, int Duration, Context context) {
+        super(context);
+        this.Id_image1 = FirstImgID;
+        this.Id_image2 = SecondImgID;
+        this.Id_image3 = ThirdImgID;
+        this.Id_image4 = FourthImgID;
+        this.Id_image5 = FithImgID;
+        this.DURATION = Duration;
         initializeView();
     }
 
@@ -78,21 +90,21 @@ public class AnimationView extends FrameLayout {
      * initialize
      */
     private void initializeView() {
-
+        inflate(getContext(), R.layout.loading_view, this);//layout_loading_view
         this.view01 = ((ImageView) findViewById(R.id.loading_view_01));
-        if(Id_image1!=0)
+        if (Id_image1 != 0)
             view01.setImageResource(Id_image1);
         this.view02 = ((ImageView) findViewById(R.id.loading_view_02));
-        if(Id_image2!=0)
+        if (Id_image2 != 0)
             view02.setImageResource(Id_image2);
         this.view03 = ((ImageView) findViewById(R.id.loading_view_03));
-        if(Id_image3!=0)
+        if (Id_image3 != 0)
             view03.setImageResource(Id_image3);
         this.view04 = ((ImageView) findViewById(R.id.loading_view_04));
-        if(Id_image4!=0)
+        if (Id_image4 != 0)
             view04.setImageResource(Id_image4);
         this.view05 = ((ImageView) findViewById(R.id.loading_view_05));
-        if(Id_image5!=0)
+        if (Id_image5 != 0)
             view05.setImageResource(Id_image5);
         this.current_view = this.view01;
         //measure the size of component; UNSPECIFIED = 0 EXACTLY = 1 AT_MOST= 2
@@ -193,6 +205,63 @@ public class AnimationView extends FrameLayout {
     public void setData(ImageView target_view) {
         this.current_view = target_view;
 //		initView();
+    }
+
+    /**
+     * 使用建造者
+     */
+    public static final class Builder {
+        private int Id_image1;
+        private int Id_image2;
+        private int Id_image3;
+        private int Id_image4;
+        private int Id_image5;
+        private int DURATION;//duration
+        private Context mContext;
+
+        //添加第一张图片
+        public Builder addFirstImage(int ImageId) {
+            Id_image1 = ImageId;
+            return this;
+        }
+
+        public Builder addSecondImage(int ImageId) {
+            Id_image2 = ImageId;
+            return this;
+        }
+
+        public Builder addThirdImage(int ImageId) {
+            Id_image3 = ImageId;
+            return this;
+        }
+
+        public Builder addFourthImage(int ImageId) {
+            Id_image4 = ImageId;
+            return this;
+        }
+
+        public Builder addFithImage(int ImageId) {
+            Id_image5 = ImageId;
+            return this;
+        }
+
+        public Builder addDuration(int duration) {
+            DURATION = duration;
+            return this;
+        }
+
+        public Builder addContext(Context context) {
+            mContext = context;
+            return this;
+        }
+
+        public AnimationView build() {
+
+            return new AnimationView(Id_image1, Id_image2, Id_image3, Id_image4, Id_image5, DURATION, mContext);
+
+        }
+
+
     }
 
 }

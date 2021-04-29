@@ -51,7 +51,7 @@ public class AnimationLoad extends Animation {
             localCamera.rotateY(rotateY);//Applies a rotation transform around the Y axis.
             localCamera.getMatrix(localMatrix);//Computes the matrix corresponding to the current transformation and copies it to the supplied matrix object.
             localCamera.restore();//Restores the saved state, if any
-            localMatrix.postScale(0.5f, 0.5f);// turn to 1/2 of original size
+//            localMatrix.postScale(0.5f, 0.5f);// turn to 1/2 of original size
             localMatrix.preTranslate(-half_view_width, -half_view_height);
             localMatrix.postTranslate(half_view_width, half_view_height);
             return;

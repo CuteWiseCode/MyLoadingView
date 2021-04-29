@@ -17,7 +17,7 @@ Step 2. Add the dependency   ![image](https://jitpack.io/v/CuteWiseCode/MyLoadin
 	       implementation 'com.github.CuteWiseCode:MyLoadingView:Tag'
 	}
   
-Step 3. Use in xml
+Step 3. Used in xml
  
  
      <com.cutewisecode.AnimationView
@@ -33,6 +33,18 @@ Step 3. Use in xml
         />
   
     
+Step 4. Uused in Code
+
+        AnimationView animationView = new AnimationView.Builder()
+                .addContext(this)
+                .addFirstImage(R.mipmap.im_cabbage)
+                .addSecondImage(R.mipmap.im_chinesechives)
+                .addThirdImage(R.mipmap.im_greenchineseonion)
+                .addFourthImage(R.mipmap.im_hyacinthbean)
+                .addFithImage(R.mipmap.im_rutabaga)
+                .addDuration(400)
+                .build();
+  
 
     
 # LoadingView
